@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Quản lý tài khoản JX1</title>
+    <meta viewport="width=device-width, initial-1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="quan ly tai khoan jx1" />
+    <meta name="keywords" content="idjx" />
+    <meta name="robots" content="index,follow" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="IDTools">
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" type="text/css" href="style.css1" /> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  </head>
+  <style type="text/css">
+    * {
+      box-sizing: border-box;
+      text-align: center;
+      margin: 0;
+    }
+    input[type="text"] {
+         border: 0;
+        opacity: .8;
+      border-radius: 3px;
+      width: 200px;
+      height: 30px;
+    }
+    input[type="text"]:hover {
+      cursor: text;
+      opacity: 1;
+    }
+    body {
+      background-color: purple;
+      /* background-image: url("bg-id.jpg"); */
+      background-image: url("https://i.imgur.com/wW9WFZJ.jpg");
+      background-size: cover;
+    }
+    .canh_le {
+        
+      display: inline-block;
+      margin-right: 20px;
+      margin-top: 5px;
+      width: 170px;
+      margin-bottom: 10px;
+      text-align: left;
+      color: blue;
+      text-shadow: 1px 1px 10px black;
+      box-sizing: border-box;
+      background-color: rgba(255, 255, 255, 0.8);
+      border-radius: 3px;
+      font-weight: bold;
+    }
+    button {
+      width: 150px;
+      height: 30px;
+    }
+    button:hover {
+      cursor: pointer;
+      font-weight: bold;
+      background-color: rgba(255, 255, 255, 0.8);
+    }
+    .quanly {
+      border-radius: 5px;
+      border: 1px solid black;
+      max-width: 50%;
+      min-width: 400px;
+      margin: auto;
+      padding: 10px;
+      box-shadow: 1px 1px 10px white;
+    }
+    .quanly:hover{
+        /* border: 3px solid transparent; */
+        border: #e2dcda solid 2px;
+        box-shadow: 2px 2px 10px white;
+    }
+    .quanly2 {
+      margin-top: 1%;
+    }
+    .quanly2 span {
+      color: white;
+      font-weight: bold;
+      font-size: 20px;
+      text-shadow: 1px 1px 10px white;
+    }
+    .canhle2 {
+        
+      width: auto;
+      color: red;
+      text-shadow: 1px 1px 10px white;
+      margin-top: 10px;
+    }
+
+    .key_sv1 {
+      width: 64% !important;
+    }
+
+    @media screen and (max-width: 600px) {
+        body {
+      background-color: purple;
+      /* background-image: url("bg-phone.jpg"); */
+      background-image: url("https://i.imgur.com/YvTS9B7.jpg");
+      background-size: cover;
+        }
+      .quanly {
+        border-radius: 5px;
+        border: 1px solid black;
+        max-width: 100%;
+        min-width: 200px;
+        margin: auto;
+        padding: 5px;
+        box-shadow: 1px 1px 10px white;
+        max-height: auto;
+      }
+      .quanly2 {
+        margin-top: 1%;
+        }
+      input[type="text"] {
+        border-radius: 5px;
+        width: 180px;
+        height: 30px;
+      }
+      .canh_le {
+        margin-top: 10px;
+        text-align: center;
+        margin-left: 8px;
+      }
+      .khung {
+        box-sizing: border-box;
+        border: 1px solid rgb(71, 18, 18);
+        max-width: 100%;
+        min-width: 100%;
+        margin: 1px 0;
+        width: auto;
+        border-radius: 5px;
+      }
+
+      @media screen and (max-width: 400px) {
+        body {
+      background-color: purple;
+      /* background-image: url("bg-phone.jpg"); */
+      background-image: url("https://i.imgur.com/YvTS9B7.jpg");
+      background-size: cover;
+        }
+        button{
+        color: rgb(238,130,238);
+        }
+      .quanly {
+        border-radius: 5px;
+        border: 1px solid black;
+        max-width: 100%;
+        min-width: 100%;
+        margin: auto;
+        padding: 5px;
+        box-shadow: 1px 1px 10px white;
+        max-height: auto;
+      }
+      .quanly2 {
+        margin-top: 1%;
+        }
+      input[type="text"] {
+        border-radius: 5px;
+        width: 180px;
+        height: 30px;
+      }
+      .canh_le {
+        margin-top: 10px;
+        text-align: center;
+        margin-left: 8px;
+      }
+      .khung {
+        box-sizing: border-box;
+        border: 1px solid rgb(71, 18, 18);
+        max-width: 100%;
+        min-width: 100%;
+        margin: 1px 0;
+        width: auto;
+        border-radius: 5px;
+      }
+
+
+    }
+}
+  </style>
+  <body>
+    <div class="quanly quanly2"><span>Quản lý tài khoản</span></div>
+
+    <div class="quanly">
+      <!-- <form action="http://192.168.0.102/backup.php" method="post"> -->
+      <!-- <form> -->
+      <div class="khung">
+        <span class="canh_le">Nhập địa chỉ API: </span>
+        <input class="giatri key_sv1" type="text" id="api_url" placeholder="Nhập IP là được"/>
+      </div>
+      <div class="khung">
+        <span class="canh_le">Nhập Key-SV: </span>
+        <input class="giatri key_sv1" type="text" id="key_sv" placeholder="Key đối chiếu với API"/>
+      </div>
+      <div class="khung">
+        <span class="canh_le">Nhập tài khoản: </span>
+        <input class="giatri" type="text" id="check_id" placeholder="Nhập tài khoản cần thao tác"/>
+        <button id="load_sv" name="check_id">Kiểm tra tài khoản</button>
+      </div>
+      <div class="khung">
+        <span class="canh_le canhle2" id="ketqua0">Kết quả: </span>
+        <span class="canh_le canhle2" id="ketqua"></span>
+      </div>
+      <div class="khung">
+        <span class="canh_le">Nhập số xu cần thêm:</span>
+        <input class="giatri" type="text" id="add_xu" placeholder="Nhập xu cần thêm" />
+        <button id="load_sv" name="add_xu">Thêm Xu</button>
+      </div>
+      <div class="khung">
+        <span class="canh_le">Nhập pass 1 cần đổi:</span>
+        <input class="giatri" type="text" id="change_pass1" placeholder="Nhập pass 1 cần đổi" />
+        <button id="load_sv" name="change_pass1">Thay đổi pass 1</button>
+      </div>
+      <div class="khung">
+        <span class="canh_le">Nhập pass 2 cần đổi:</span>
+        <input class="giatri" type="text" id="change_pass2" placeholder="Nhập pass 2 cần đổi" />
+        <button id="load_sv" name="change_pass2">Thay đổi pass 2</button>
+      </div>
+      <div class="khung">
+        <span class="canh_le">Band acc Enddate:</span>
+        <input class="giatri" type="text" id="band_acc" placeholder="Tự lấy Username ở trên" />
+        <button id="load_sv" name="band_acc">Band acc</button>
+      </div>
+      <div class="khung">
+        <span class="canh_le">Mở Band acc Enddate:</span>
+        <input class="giatri" type="text" id="open_acc" placeholder="Tự lấy Username ở trên" />
+        <button id="load_sv" name="open_acc">Mở Band acc</button>
+      </div>
+      <div class="khung">
+        <span class="canh_le">Bảo trì SQL (nhập số 1):</span>
+        <input class="giatri" type="text" id="baotri_sql" placeholder="1 (đã nhập)" />
+        <button id="load_sv" name="baotri_sql">Bảo trì</button>
+      </div>
+
+      <div class="khung">
+        <span class="canh_le">Tạo Tài Khoản (pass 1):</span>
+        <input class="giatri" type="text" id="tao_taikhoan" placeholder="Nhập tên tài khoản cần tạo"/>
+        <button id="load_sv" name="tao_taikhoan">Tạo Tài Khoản</button>
+      </div>
+
+      <!-- </form> -->
+    </div>
+    <script charset="UTF-8">
+      var button = $("[id=load_sv]");
+      $(document).ready(function () {
+        button.click(function () {
+          //   var check_id1 = $("#check_id").val();
+          var load_xu = $("#load_xu");
+          var load_timelogin = $("#load_timelogin");
+          var add_xu = $("#add_xu").val();
+          var change_pass1 = $("#change_pass1").val();
+          var change_pass2 = $("#change_pass2").val();
+          var band_acc = $("#band_acc").val();
+          var baotri_sql = $("#baotri_sql").val();
+          var tao_taikhoan = $("#tao_taikhoan").val();
+          var key_sv = $("#key_sv").val();
+          var ketqua = $("#ketqua");
+          var inputvalua = $(".giatri").get(0);
+          var attrSend = this.attributes["name"];
+          var get_idAttribute = $(attrSend).val();
+          var get_idAttribute1 = document.getElementById(get_idAttribute).value;
+          var check_id = document.getElementById("check_id").value;
+          // console.log(get_idAttribute);
+          // console.log(get_idAttribute1);
+          //   console.log(attrSend);
+          //   console.log(check_id);
+          //   console.log(key_sv);
+          //ajax
+        //   var url = "http://192.168.0.102/backup.php";
+        var api_url = $("#api_url").val();         
+        var url = ("http://"+api_url+"/backup.php");
+          $.ajax({
+            url: url,
+            method: "POST",
+            // dataType: 'JSON',
+            data: {
+              api_key: "1993",
+              api_username: key_sv,
+              tentaikhoan: check_id,
+              tenbiensql: get_idAttribute,
+              giatrinhapvao: get_idAttribute1,
+            },
+            success: function (data) {
+            //   console.log(data);
+             $(ketqua).html(data);
+            },
+            error: function (err) {
+            //   console.log("error:" + err);
+              $(ketqua).html("error:" + err);
+            },
+          });
+          //end ajax
+        });
+      });
+    </script>
+  </body>
+</html>
