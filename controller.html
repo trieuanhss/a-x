@@ -333,10 +333,11 @@
                // var url = "http://localhost/idjx/googleAuthentication.php";
                 $.ajax({
                     url: url,
-                    method: "POST",
                     headers: {
-                        'Access-Control-Allow-Origin: *'
+                        'Access-Control-Allow-Origin': '*',
+                        'Access-Control-Allow-Methods': 'POST',
                     },
+                    method: "POST",
                     data: {
                         api_key: UUID,
                         api_key2: UUID2,
