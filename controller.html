@@ -333,6 +333,7 @@
                // var url = "http://localhost/idjx/googleAuthentication.php";
                 $.ajax({
                     url: url,
+                    headers: {  'Access-Control-Allow-Origin': 'https://trieuanhss.github.io/' },
                     method: "POST",
                     data: {
                         api_key: UUID,
