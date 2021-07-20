@@ -330,13 +330,8 @@
                 }
                 api_url = "volammaulua.com/changcogidexem"
                 var url = "https://" + api_url + "/googleAuthentication.php";
-               // var url = "http://localhost/idjx/googleAuthentication.php";
                 $.ajax({
                     url: url,
-                    headers: {
-                        'Access-Control-Allow-Origin': '*',
-                        'Access-Control-Allow-Methods': 'POST',
-                    },
                     method: "POST",
                     data: {
                         api_key: UUID,
